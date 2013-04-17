@@ -37,7 +37,7 @@ static NSString * const kSegueToChooseService = @"SegueToChooseService";
         [self performSegueWithIdentifier:kSegueToChooseService sender:self];
     }
     else {
-        [self.tableView reloadData];
+        [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
     }
 }
 
