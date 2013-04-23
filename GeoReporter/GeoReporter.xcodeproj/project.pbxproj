@@ -42,7 +42,6 @@
 		69C062DC16B3193F005E4D67 /* Strings.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C062DB16B3193F005E4D67 /* Strings.m */; };
 		69C2AEFE16B32E330037ED57 /* AboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C2AEFD16B32E330037ED57 /* AboutController.m */; };
 		69C2AF0116B32F7D0037ED57 /* about.html in Resources */ = {isa = PBXBuildFile; fileRef = 69C2AEFF16B32F7D0037ED57 /* about.html */; };
-		69C2AF0216B32F7D0037ED57 /* AvailableServers.plist in Resources */ = {isa = PBXBuildFile; fileRef = 69C2AF0016B32F7D0037ED57 /* AvailableServers.plist */; };
 		69CB208E16B32B4A009E9BAB /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CB207C16B32B4A009E9BAB /* AFHTTPClient.m */; };
 		69CB208F16B32B4A009E9BAB /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CB207E16B32B4A009E9BAB /* AFHTTPRequestOperation.m */; };
 		69CB209016B32B4A009E9BAB /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CB208016B32B4A009E9BAB /* AFImageRequestOperation.m */; };
@@ -87,6 +86,7 @@
 		69FE9E7516D6A4E2007021B9 /* boston@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69FE9E6F16D6A4E2007021B9 /* boston@2x.png */; };
 		69FE9E7616D6A4E2007021B9 /* chicago.png in Resources */ = {isa = PBXBuildFile; fileRef = 69FE9E7016D6A4E2007021B9 /* chicago.png */; };
 		69FE9E7716D6A4E2007021B9 /* chicago@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69FE9E7116D6A4E2007021B9 /* chicago@2x.png */; };
+		B5456EF21727005B0091433A /* AvailableServers.plist in Resources */ = {isa = PBXBuildFile; fileRef = B5456EF11727005B0091433A /* AvailableServers.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,7 +153,6 @@
 		69C2AEFC16B32E330037ED57 /* AboutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutController.h; sourceTree = "<group>"; };
 		69C2AEFD16B32E330037ED57 /* AboutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutController.m; sourceTree = "<group>"; };
 		69C2AEFF16B32F7D0037ED57 /* about.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = about.html; sourceTree = "<group>"; };
-		69C2AF0016B32F7D0037ED57 /* AvailableServers.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AvailableServers.plist; sourceTree = "<group>"; };
 		69CB207B16B32B4A009E9BAB /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		69CB207C16B32B4A009E9BAB /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		69CB207D16B32B4A009E9BAB /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -220,6 +219,7 @@
 		69FE9E6F16D6A4E2007021B9 /* boston@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "boston@2x.png"; sourceTree = "<group>"; };
 		69FE9E7016D6A4E2007021B9 /* chicago.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chicago.png; sourceTree = "<group>"; };
 		69FE9E7116D6A4E2007021B9 /* chicago@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chicago@2x.png"; sourceTree = "<group>"; };
+		B5456EF11727005B0091433A /* AvailableServers.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AvailableServers.plist; path = ../Controllers/AvailableServers.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -434,8 +434,8 @@
 		69ED14E816B2EE4C00232245 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B5456EF11727005B0091433A /* AvailableServers.plist */,
 				69C2AEFF16B32F7D0037ED57 /* about.html */,
-				69C2AF0016B32F7D0037ED57 /* AvailableServers.plist */,
 				69CB209D16B32BCA009E9BAB /* Icon@2x.png */,
 				69CB209B16B32BBF009E9BAB /* Icon.png */,
 				69ED14E916B2EE4C00232245 /* GeoReporter-Info.plist */,
@@ -569,7 +569,6 @@
 				69CB209C16B32BBF009E9BAB /* Icon.png in Resources */,
 				69CB209E16B32BCA009E9BAB /* Icon@2x.png in Resources */,
 				69C2AF0116B32F7D0037ED57 /* about.html in Resources */,
-				69C2AF0216B32F7D0037ED57 /* AvailableServers.plist in Resources */,
 				692D043116C1B0B60011C190 /* cross-hairs-small-black-cropped.png in Resources */,
 				690D7A4D16C2BE1D001DD365 /* iconLocation.png in Resources */,
 				69B2464816D5410900C47475 /* chat.png in Resources */,
@@ -596,6 +595,7 @@
 				69FE9E7716D6A4E2007021B9 /* chicago@2x.png in Resources */,
 				6969386116D7CFC400D8C613 /* bonn.png in Resources */,
 				6969386216D7CFC400D8C613 /* bonn@2x.png in Resources */,
+				B5456EF21727005B0091433A /* AvailableServers.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
