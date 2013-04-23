@@ -65,6 +65,7 @@ static NSString * const kSegueToReport  = @"SegueToReport";
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
     ReportController *report = [segue destinationViewController];
     report.service = services[[[self.tableView indexPathForSelectedRow] row]];
 }
