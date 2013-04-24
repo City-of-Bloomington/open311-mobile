@@ -12,10 +12,7 @@
 #import <UIKit/UIKit.h>
 
 @interface AddServerController : UITableViewController
-@property (weak, nonatomic) IBOutlet UILabel *labelName;
-@property (weak, nonatomic) IBOutlet UILabel *labelUrl;
-@property (weak, nonatomic) IBOutlet UILabel *labelJurisdiction;
-@property (weak, nonatomic) IBOutlet UILabel *labelApiKey;
+
 @property (weak, nonatomic) IBOutlet UILabel *labelSupportsMedia;
 
 @property (weak, nonatomic) IBOutlet UITextField *textFieldName;

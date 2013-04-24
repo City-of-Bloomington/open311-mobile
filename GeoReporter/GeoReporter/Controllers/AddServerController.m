@@ -25,11 +25,11 @@
 
     self.navigationItem.title = NSLocalizedString(kUI_ButtonAddServer, nil);
     
-    self.labelName         .text = NSLocalizedString(kUI_Name,           nil);
-    self.labelUrl          .text = NSLocalizedString(kUI_Url,            nil);
-    self.labelJurisdiction .text = NSLocalizedString(kUI_JurisdictionId, nil);
-    self.labelApiKey       .text = NSLocalizedString(kUI_ApiKey,         nil);
-    self.labelSupportsMedia.text = NSLocalizedString(kUI_SupportsMedia,  nil);
+    self.textFieldName         .placeholder = NSLocalizedString(kUI_Name,           nil);
+    self.textFieldUrl          .placeholder = NSLocalizedString(kUI_Url,            nil);
+    self.textFieldJurisdiction .placeholder = NSLocalizedString(kUI_JurisdictionId, nil);
+    self.textFieldApiKey       .placeholder = NSLocalizedString(kUI_ApiKey,         nil);
+    self.labelSupportsMedia    .text = NSLocalizedString(kUI_SupportsMedia,  nil);
 }
 
 - (IBAction)save:(id)sender
