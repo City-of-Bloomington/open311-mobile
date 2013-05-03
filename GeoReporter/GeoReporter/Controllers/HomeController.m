@@ -46,16 +46,17 @@ static NSString * const kSegueToSettings = @"SegueToSettings";
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
+
     Preferences *preferences = [Preferences sharedInstance];
     
     NSDictionary *currentServer = [preferences getCurrentServer];
+
     if (currentServer == nil) {
         [self.tabBarController setSelectedIndex:kTab_Servers];
     }
-    else {
+    else if (![busyIcon isAnimating]) {
         self.navigationItem.title = currentServer[kOpen311_Name];
-        
+
         [self startBusyIcon];
         Open311 *open311 = [Open311 sharedInstance];
         [[NSNotificationCenter defaultCenter] addObserver:self
