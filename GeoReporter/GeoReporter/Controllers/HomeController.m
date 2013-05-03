@@ -36,8 +36,15 @@ static NSString * const kSegueToSettings = @"SegueToSettings";
     [[self.tabBarController.tabBar.items objectAtIndex:kTab_Report]  setTitle:NSLocalizedString(kUI_Report,  nil)];
     [[self.tabBarController.tabBar.items objectAtIndex:kTab_Archive] setTitle:NSLocalizedString(kUI_Archive, nil)];
     [[self.tabBarController.tabBar.items objectAtIndex:kTab_Servers] setTitle:NSLocalizedString(kUI_Servers, nil)];
+    
+    [self customizeTopBar];
 }
-
+- (void)customizeTopBar{
+    
+    UIImage *topBarBackground = [[UIImage imageNamed:@"topBar"] resizableImageWithCapInsets:UIEdgeInsetsZero];
+    [[UINavigationBar appearance] setBackgroundImage:topBarBackground forBarMetrics:UIBarMetricsDefault];
+    [[[self navigationController] navigationBar] setBackgroundImage:topBarBackground forBarMetrics:UIBarMetricsDefault];
+}
 /**
  * Check if the user has chosen a server.
  * If not, redirect them to the servers tab;
