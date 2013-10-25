@@ -32,7 +32,12 @@
 	self.labelJurisdiction .text = NSLocalizedString(kUI_JurisdictionId, nil);
 	self.labelApiKey       .text = NSLocalizedString(kUI_ApiKey,         nil);
 	self.labelSupportsMedia.text = NSLocalizedString(kUI_SupportsMedia,  nil);
-	
+
+	// preset with empty strings to avoid getting nil in iOS 6, when nothing is entered in text fields
+    self.textFieldName        .text = @"";
+    self.textFieldUrl         .text = @"";
+    self.textFieldJurisdiction.text = @"";
+    self.textFieldApiKey      .text = @"";
 }
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
@@ -60,10 +65,10 @@
 {
 	Preferences *prefs = [Preferences sharedInstance];
 	[prefs addCustomServer:@{
-                             kOpen311_Name         : [self getTextFromTextField:self.textFieldName],
-                             kOpen311_Url          : [self getTextFromTextField:self.textFieldUrl],
-                             kOpen311_Jurisdiction : [self getTextFromTextField:self.textFieldJurisdiction],
-                             kOpen311_ApiKey       : [self getTextFromTextField:self.textFieldApiKey],
+                             kOpen311_Name         : self.textFieldName.text,
+                             kOpen311_Url          : self.textFieldUrl.text,
+                             kOpen311_Jurisdiction : self.textFieldJurisdiction.text,
+                             kOpen311_ApiKey       : self.textFieldApiKey.text,
 							 kOpen311_SupportsMedia: [NSNumber numberWithBool:self.switchSupportsMedia.on]
 							 }];
 	
@@ -133,12 +138,6 @@
     else if (textField == _textFieldJurisdiction) { [_textFieldApiKey       becomeFirstResponder]; }
     else { [textField resignFirstResponder]; }
     return TRUE;
-}
-
-#pragma mark - additional methods
-
-- (NSString *)getTextFromTextField:(UITextField *)textField {
-    return textField.text.length ? textField.text : @"";
 }
 
 @end
